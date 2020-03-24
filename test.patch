@@ -1,0 +1,316 @@
+diff --git a/robot/robot-plat/src/main/wangsiying_fe/src/views/sys/index.vue b/robot/robot-plat/src/main/wangsiying_fe/src/views/sys/index.vue
+index 0bf43d6..4b7e8d6 100644
+--- a/robot/robot-plat/src/main/wangsiying_fe/src/views/sys/index.vue
++++ b/robot/robot-plat/src/main/wangsiying_fe/src/views/sys/index.vue
+@@ -1,7 +1,3 @@
+ <template>
+   <router-view class="view-mount"/>
+-</template>
+-
+-<script>
+-export default {}
+-</script>
+\ No newline at end of file
++</template>
+\ No newline at end of file
+diff --git a/robot/robot-plat/src/main/wangsiying_fe/src/views/sys/robot/index.vue b/robot/robot-plat/src/main/wangsiying_fe/src/views/sys/robot/index.vue
+index 98dde41..42c9564 100644
+--- a/robot/robot-plat/src/main/wangsiying_fe/src/views/sys/robot/index.vue
++++ b/robot/robot-plat/src/main/wangsiying_fe/src/views/sys/robot/index.vue
+@@ -59,7 +59,7 @@
+       </el-row>
+       <!-- 显示数据表格 -->
+       <el-row class="robotList-content-table-p">
+-        <el-scrollbar style="height: 100%">
++        <!-- <el-scrollbar style="height: 100%">
+           <el-table class="robotList-content-table comTable" ref="robotTable" :data="dataList" @row-click="rowClick" highlight-current-row stripe>
+             <el-table-column type="expand">
+               <template slot-scope="props">
+@@ -95,17 +95,8 @@
+               <template slot-scope="props"> {{props.row.scram_state | robot-stopFlag-filter }}</template>
+             </el-table-column>
+             <el-table-column prop="robot_ip" label="设备IP" show-overflow-tooltip></el-table-column>
+-            <!-- 操作按钮 -->
+-            <!-- <el-table-column label="操作" width="260">
+-              <template slot-scope="props">
+-                <el-button type="text" @click="doEdit(props.row)" icon="el-icon-edit"></el-button>
+-                <el-button type="text" @click="doDelete(props.row)" icon="el-icon-delete"></el-button>
+-                <el-button type="text" @click="synchronizationPoint(props.row)">同步测点</el-button>
+-                <el-button type="text" @click="queryHistoryTaskRecord(props.row)">同步历史任务</el-button>
+-              </template>
+-            </el-table-column> -->
+           </el-table>
+-        </el-scrollbar>
++        </el-scrollbar> -->
+       </el-row>
+       <!-- 分页结构 -->
+       <el-row class="robotList-content-page comSty" v-if="total > 0">
+diff --git a/robot/robot-plat/src/main/wangsiying_fe/src/views/test/a.vue b/robot/robot-plat/src/main/wangsiying_fe/src/views/test/a.vue
+new file mode 100644
+index 0000000..c6c7f43
+--- /dev/null
++++ b/robot/robot-plat/src/main/wangsiying_fe/src/views/test/a.vue
+@@ -0,0 +1,22 @@
++<template>
++  <div>
++    <router-link :to="`/test/${i}`" v-for="i in links" :key="i" class="links">{{i}}</router-link>
++    <h3>a</h3>
++  </div>
++</template>
++
++<script>
++export default {
++  data () {
++    return {
++      links: ['a','b','c','d','e','f','g','h','i']
++    }
++  }
++}
++</script>
++
++<style>
++.links {
++  margin: 0 20px;
++}
++</style>
+diff --git a/robot/robot-plat/src/main/wangsiying_fe/src/views/test/b.vue b/robot/robot-plat/src/main/wangsiying_fe/src/views/test/b.vue
+new file mode 100644
+index 0000000..39872a0
+--- /dev/null
++++ b/robot/robot-plat/src/main/wangsiying_fe/src/views/test/b.vue
+@@ -0,0 +1,22 @@
++<template>
++  <div>
++    <router-link :to="`/test/${i}`" v-for="i in links" :key="i" class="links">{{i}}</router-link>
++    <h3>b</h3>
++  </div>
++</template>
++
++<script>
++export default {
++  data () {
++    return {
++      links: ['a','b','c','d','e','f','g','h','i']
++    }
++  }
++}
++</script>
++
++<style>
++.links {
++  margin: 0 20px;
++}
++</style>
+diff --git a/robot/robot-plat/src/main/wangsiying_fe/src/views/test/c.vue b/robot/robot-plat/src/main/wangsiying_fe/src/views/test/c.vue
+new file mode 100644
+index 0000000..538866f
+--- /dev/null
++++ b/robot/robot-plat/src/main/wangsiying_fe/src/views/test/c.vue
+@@ -0,0 +1,22 @@
++<template>
++  <div>
++    <router-link :to="`/test/${i}`" v-for="i in links" :key="i" class="links">{{i}}</router-link>
++    <h3>c</h3>
++  </div>
++</template>
++
++<script>
++export default {
++  data () {
++    return {
++      links: ['a','b','c','d','e','f','g','h','i']
++    }
++  }
++}
++</script>
++
++<style>
++.links {
++  margin: 0 20px;
++}
++</style>
+diff --git a/robot/robot-plat/src/main/wangsiying_fe/src/views/test/d.vue b/robot/robot-plat/src/main/wangsiying_fe/src/views/test/d.vue
+new file mode 100644
+index 0000000..b9d7d33
+--- /dev/null
++++ b/robot/robot-plat/src/main/wangsiying_fe/src/views/test/d.vue
+@@ -0,0 +1,22 @@
++<template>
++  <div>
++    <router-link :to="`/test/${i}`" v-for="i in links" :key="i" class="links">{{i}}</router-link>
++    <h3>d</h3>
++  </div>
++</template>
++
++<script>
++export default {
++  data () {
++    return {
++      links: ['a','b','c','d','e','f','g','h','i']
++    }
++  }
++}
++</script>
++
++<style>
++.links {
++  margin: 0 20px;
++}
++</style>
+diff --git a/robot/robot-plat/src/main/wangsiying_fe/src/views/test/e.vue b/robot/robot-plat/src/main/wangsiying_fe/src/views/test/e.vue
+new file mode 100644
+index 0000000..9864813
+--- /dev/null
++++ b/robot/robot-plat/src/main/wangsiying_fe/src/views/test/e.vue
+@@ -0,0 +1,22 @@
++<template>
++  <div>
++    <router-link :to="`/test/${i}`" v-for="i in links" :key="i" class="links">{{i}}</router-link>
++    <h3>e</h3>
++  </div>
++</template>
++
++<script>
++export default {
++  data () {
++    return {
++      links: ['a','b','c','d','e','f','g','h','i']
++    }
++  }
++}
++</script>
++
++<style>
++.links {
++  margin: 0 20px;
++}
++</style>
+diff --git a/robot/robot-plat/src/main/wangsiying_fe/src/views/test/f.vue b/robot/robot-plat/src/main/wangsiying_fe/src/views/test/f.vue
+new file mode 100644
+index 0000000..9f0cf0e
+--- /dev/null
++++ b/robot/robot-plat/src/main/wangsiying_fe/src/views/test/f.vue
+@@ -0,0 +1,22 @@
++<template>
++  <div>
++    <router-link :to="`/test/${i}`" v-for="i in links" :key="i" class="links">{{i}}</router-link>
++    <h3>f</h3>
++  </div>
++</template>
++
++<script>
++export default {
++  data () {
++    return {
++      links: ['a','b','c','d','e','f','g','h','i']
++    }
++  }
++}
++</script>
++
++<style>
++.links {
++  margin: 0 20px;
++}
++</style>
+diff --git a/robot/robot-plat/src/main/wangsiying_fe/src/views/test/g.vue b/robot/robot-plat/src/main/wangsiying_fe/src/views/test/g.vue
+new file mode 100644
+index 0000000..aa55d8b
+--- /dev/null
++++ b/robot/robot-plat/src/main/wangsiying_fe/src/views/test/g.vue
+@@ -0,0 +1,22 @@
++<template>
++  <div>
++    <router-link :to="`/test/${i}`" v-for="i in links" :key="i" class="links">{{i}}</router-link>
++    <h3>g</h3>
++  </div>
++</template>
++
++<script>
++export default {
++  data () {
++    return {
++      links: ['a','b','c','d','e','f','g','h','i']
++    }
++  }
++}
++</script>
++
++<style>
++.links {
++  margin: 0 20px;
++}
++</style>
+diff --git a/robot/robot-plat/src/main/wangsiying_fe/src/views/test/h.vue b/robot/robot-plat/src/main/wangsiying_fe/src/views/test/h.vue
+new file mode 100644
+index 0000000..d8490f3
+--- /dev/null
++++ b/robot/robot-plat/src/main/wangsiying_fe/src/views/test/h.vue
+@@ -0,0 +1,22 @@
++<template>
++  <div>
++    <router-link :to="`/test/${i}`" v-for="i in links" :key="i" class="links">{{i}}</router-link>
++    <h3>h</h3>
++  </div>
++</template>
++
++<script>
++export default {
++  data () {
++    return {
++      links: ['a','b','c','d','e','f','g','h','i']
++    }
++  }
++}
++</script>
++
++<style>
++.links {
++  margin: 0 20px;
++}
++</style>
+diff --git a/robot/robot-plat/src/main/wangsiying_fe/src/views/test/i.vue b/robot/robot-plat/src/main/wangsiying_fe/src/views/test/i.vue
+new file mode 100644
+index 0000000..3f7296d
+--- /dev/null
++++ b/robot/robot-plat/src/main/wangsiying_fe/src/views/test/i.vue
+@@ -0,0 +1,22 @@
++<template>
++  <div>
++    <router-link :to="`/test/${i}`" v-for="i in links" :key="i" class="links">{{i}}</router-link>
++    <h3>i</h3>
++  </div>
++</template>
++
++<script>
++export default {
++  data () {
++    return {
++      links: ['a','b','c','d','e','f','g','h','i']
++    }
++  }
++}
++</script>
++
++<style>
++.links {
++  margin: 0 20px;
++}
++</style>
+diff --git a/robot/robot-plat/src/main/wangsiying_fe/src/views/test/index.js b/robot/robot-plat/src/main/wangsiying_fe/src/views/test/index.js
+new file mode 100644
+index 0000000..6a2c8c5
+--- /dev/null
++++ b/robot/robot-plat/src/main/wangsiying_fe/src/views/test/index.js
+@@ -0,0 +1,10 @@
++export { default as a }
++from './a'
++export { default as b }
++from './b'
++export { default as c }
++from './c'
++export { default as d }
++from './d'
++export { default as e }
++from './e'
+\ No newline at end of file

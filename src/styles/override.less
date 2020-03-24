@@ -1,0 +1,98 @@
+// body {
+//   background-color: aquamarine;
+// }
+// .el-scrollbar__wrap {
+//   overflow-x: hidden;
+// }
+
+//.comSty {
+//  height: 40px;
+//  padding-left: 10px;
+//  border-top: 1px solid RGB(173, 232, 214);
+//  border-bottom: 1px solid RGB(173, 232, 214);
+//  background-color: rgb(219, 237, 235);
+//}//
+ .comSty {
+   padding: 10px;
+   background-color: #fff;
+}
+.pageStyle {
+  height: 45px;
+  display: flex;
+  align-items: center;
+  flex-flow: row-reverse;
+  text-align: right;
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+.comTable {
+  &.el-table {
+    font-size: 14px;
+    th {
+      // background-color: RGB(173, 232, 214);
+      //background-color: #eee;
+    }
+    tr:hover {
+      // background-color: RGB(173, 232, 214);
+      background-color: #eaf2ff;
+    }
+    tr.el-table__row.current-row td {
+      //background-color: rgb(197, 236, 232);
+      //background-color: #91e4ed;
+      background-color: rgba(145,229,231,.3);
+    }
+    .el-button {
+      font-size: 14px;
+    }
+  }
+}
+
+.comAside {
+  &.el-aside {
+    height: 100%;
+    font-size: 16px;
+    //border-right: 2px solid RGB(173, 232, 214);
+    //background-color: rgb(219, 237, 235);
+    background-color: #ccc;
+    .el-tree {
+      background: none;
+      .el-tree-node.is-current>.el-tree-node__content {
+        background-color: RGB(173, 232, 214);
+      }
+    }
+  }
+  .el-scrollbar__wrap {
+    overflow-x: hidden;
+  }
+}
+
+// 顶部导航样式修改
+.comMenu {
+  &.el-menu {
+    color: #354556;
+    background-color: #d6dde4;
+    .el-menu-item {
+      color: #354556;
+    }
+    .el-menu-item.is-active {
+      color: hotpink;
+      background-color: #354556;
+      border-bottom: 2px solid hotpink;
+    }
+    //  .el-menu-item:not(.is-disabled):focus, .
+    .el-menu-item:not(.is-disabled):hover, .el-submenu .el-submenu__title:hover {
+      color: #d6dde4;
+      border: none;
+      background-color: #354556;
+    }
+  }
+}
+
+// tree 样式
+.comTree {
+  &.el-tree {
+    color: #d6dde4;
+    background-color: transparent;
+  }
+}
